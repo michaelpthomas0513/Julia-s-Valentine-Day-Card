@@ -6,26 +6,25 @@
     <title>Be My Valentine? ❤️</title>
     <style>
         body {
+            margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
-            font-family: 'Helvetica', sans-serif;
-            margin: 0;
+            font-family: 'Arial', sans-serif;
             overflow: hidden;
-        }
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ff85a2, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+}
 
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: center;
-            z-index: 10;
-            width: 90%;
-            max-width: 500px;
-        }
+/* This creates the movement effect */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
         h1 { color: #d63384; margin-bottom: 20px; }
 
