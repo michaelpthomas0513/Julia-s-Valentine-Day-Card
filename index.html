@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Be My Valentine? ❤️</title>
+    <title>Be My Valentine? ❤️</title>
     <style>
         body {
-            margin: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            background-color: #ffe4e1;
             font-family: 'Arial', sans-serif;
+            margin: 0;
             overflow: hidden;
-            /* Animated Gradient Background */
-            background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ff85a2, #fbc2eb);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-}
+        }
 
-/* This creates the movement effect */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 10;
+            width: 90%;
+            max-width: 500px;
+        }
 
         h1 { color: #d63384; margin-bottom: 20px; }
 
@@ -84,7 +85,7 @@
 <body>
 
     <div class="container" id="mainCard">
-        <h1>Happy 5 years bb. You would think after 5 years its assumed that im your valentine, BUT with that being said. Will you be my Valentine? ❤️</h1>
+        <h1>Will you be my Valentine? ❤️</h1>
         <div class="buttons">
             <button id="yesBtn" onclick="celebrate()">Yes</button>
             <button id="noBtn" onclick="tryAgain()">No</button>
@@ -92,7 +93,7 @@
     </div>
 
     <div class="container hidden" id="successCard">
-        <h1>Isssa date. See you next week 🥰🥰</h1>
+        <h1>Yay! See you on the 14th! 🥰</h1>
         
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE?autoplay=1" 
@@ -121,7 +122,7 @@
         function tryAgain() {
             const noBtn = document.getElementById('noBtn');
             const yesBtn = document.getElementById('yesBtn');
-            noBtn.innerText = "Bro are you deadass? 🙄";
+            noBtn.innerText = "Wrong answer, try again! 🙄";
             const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
             yesBtn.style.fontSize = (currentSize + 10) + "px";
         }
